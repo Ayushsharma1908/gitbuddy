@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Grift Font - Add your Grift font files to public/fonts/ and uncomment below */
+/* @font-face {
+  font-family: 'Grift';
+  src: url('/fonts/Grift-Regular.woff2') format('woff2'),
+       url('/fonts/Grift-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Grift';
+  src: url('/fonts/Grift-Bold.woff2') format('woff2'),
+       url('/fonts/Grift-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} */
