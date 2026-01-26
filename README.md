@@ -1,52 +1,103 @@
-# 🤝 GitBuddy
+# GitBuddy
 
-GitBuddy helps beginners understand **any public GitHub repository** in seconds.
+Understand any GitHub repository in seconds. AI-powered visualization and explanations tailored for beginners and developers alike.
 
-Paste a GitHub repo link and GitBuddy will:
-- 📁 Show full project structure in a colorful tree
-- ⚙️ Detect frontend, backend, database, tools
-- 🧠 Explain the project in beginner-friendly language
-- 🚀 Recommend improvements & missing best practices
+## Project Structure
 
----
+```
+gitbuddy/
+├── client/                 # Frontend application
+│   ├── src/
+│   │   ├── pages/         # Page components
+│   │   │   └── LandingPage.jsx
+│   │   ├── App.jsx        # Main app component
+│   │   ├── main.jsx       # Entry point
+│   │   └── index.css      # Global styles
+│   ├── public/            # Static assets
+│   ├── index.html         # HTML template
+│   ├── vite.config.js     # Vite configuration
+│   ├── tailwind.config.js # Tailwind CSS configuration
+│   ├── postcss.config.js  # PostCSS configuration
+│   └── package.json       # Client dependencies
+│
+├── server/                # Backend application
+│   ├── index.js           # Server entry point
+│   └── package.json       # Server dependencies
+│
+└── package.json           # Root package.json with workspace scripts
+```
 
-## ✨ Features
+## Getting Started
 
-- Visual folder tree with color coding
-- Automatic tech stack detection
-- Beginner explanations (no jargon)
-- Smart project recommendations
-- Built with React + Tailwind CSS
+### Prerequisites
 
----
+- Node.js (v18 or higher)
+- npm
 
-## 🛠 Tech Stack
+### Installation
 
-- **Frontend:** React (Vite)
-- **Styling:** Tailwind CSS
-- **API (future):** GitHub REST API
-- **Deployment:** Vercel
-
----
-
-## 🧪 How It Works
-
-1. User pastes a public GitHub repo URL
-2. GitBuddy scans the repo structure
-3. Detects:
-   - Frontend framework
-   - Backend framework
-   - Database
-   - Tools & configs
-4. Displays:
-   - Tree view
-   - Tech stack
-   - Suggestions
-
----
-
-## 🚀 Getting Started
+Install all dependencies (client and server):
 
 ```bash
+npm run install:all
+```
+
+Or install separately:
+
+```bash
+# Install client dependencies
+cd client
 npm install
+
+# Install server dependencies
+cd ../server
+npm install
+```
+
+### Development
+
+Run the client development server:
+
+```bash
 npm run dev
+# or
+npm run dev:client
+```
+
+Run the server:
+
+```bash
+npm run dev:server
+```
+
+### Build
+
+Build the client for production:
+
+```bash
+npm run build
+# or
+npm run build:client
+```
+
+## Color Palette
+
+- Primary: `#6F2DBD` (Purple)
+- Secondary: `#A663CC` (Light Purple)
+- Dark: `#171123` (Dark Purple/Black)
+- Light: `#FBFBFB` (Almost White)
+
+## Tech Stack
+
+### Frontend
+- React 19
+- Vite
+- Tailwind CSS
+- PostCSS
+
+### Backend
+- Node.js (ready for Express, Fastify, or your preferred framework)
+
+## License
+
+ISC
