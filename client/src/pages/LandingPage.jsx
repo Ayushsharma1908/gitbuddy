@@ -1,4 +1,4 @@
-export default function App() {
+export default function LandingPage() {
   return (
     <div className="min-h-screen bg-[#FBFBFB] font-sans">
       {/* Header */}
@@ -47,12 +47,12 @@ export default function App() {
               />
             </div>
             <button className="bg-[#6F2DBD] hover:bg-[#A663CC] text-white px-8 py-4 rounded-lg font-medium transition whitespace-nowrap">
-              Visualize
+              Analyze
             </button>
           </div>
 
           <p className="text-sm text-gray-500">
-            Don't have a link? <a href="#" className="text-[#6F2DBD] hover:text-[#A663CC] underline">Try with a demo repository</a>
+            Don't know how it works? <a href="#" className="text-[#6F2DBD] hover:text-[#A663CC] underline">Check Here!</a>
           </p>
         </div>
       </section>
@@ -90,12 +90,12 @@ export default function App() {
             {/* Feature 2: Tech Stack Detection */}
             <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition">
               <div className="w-12 h-12 bg-[#A663CC]/20 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#6F2DBD]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                <svg className="w-6 h-6 text-[#6F2DBD]" viewBox="0 -960 960 960" fill="currentColor">
+                  <path d="M160-120q-33 0-56.5-23.5T80-200v-560q0-33 23.5-56.5T160-840h560q33 0 56.5 23.5T800-760v80h80v80h-80v80h80v80h-80v80h80v80h-80v80q0 33-23.5 56.5T720-120H160Zm0-80h560v-560H160v560Zm80-80h200v-160H240v160Zm240-280h160v-120H480v120Zm-240 80h200v-200H240v200Zm240 200h160v-240H480v240ZM160-760v560-560Z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Tech Stack Detection</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-[#171123] mb-2">Tech Stack Detection</h3>
+              <p className="text-[#171123]/70">
                 Instantly identify languages, frameworks, and core libraries.
               </p>
             </div>
@@ -103,12 +103,12 @@ export default function App() {
             {/* Feature 3: Beginner Friendly */}
             <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition">
               <div className="w-12 h-12 bg-[#A663CC]/20 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#6F2DBD]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clipRule="evenodd" />
+                <svg className="w-6 h-6 text-[#6F2DBD]" viewBox="0 -960 960 960" fill="currentColor">
+                  <path d="M520-240v-143l-45-49-21 106-150-31 8-39 111 23 39-196-62 23v66h-40v-94l131-48q15-5 29.5 1t21.5 20q25 51 55.5 66t42.5 15v40q-21 0-55-16.5T524-550l-17 94 53 57v159h-40Zm20-400q-17 0-28.5-11.5T500-680q0-17 11.5-28.5T540-720q17 0 28.5 11.5T580-680q0 17-11.5 28.5T540-640ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Beginner Friendly</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-[#171123] mb-2">Beginner Friendly</h3>
+              <p className="text-[#171123]/70">
                 Complex code broken down into plain English for easy learning.
               </p>
             </div>
@@ -116,12 +116,12 @@ export default function App() {
             {/* Feature 4: Smart Suggestions */}
             <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition">
               <div className="w-12 h-12 bg-[#A663CC]/20 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#6F2DBD]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" />
+                <svg className="w-6 h-6 text-[#6F2DBD]" viewBox="0 -960 960 960" fill="currentColor">
+                  <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Zm0 280q25 0 42.5-17.5T540-260H420q0 25 17.5 42.5T480-200ZM360-300h240v-60H360v60Zm1-100h238q37-27 59-68.5t22-91.5q0-83-58.5-141.5T480-760q-83 0-141.5 58.5T280-560q0 50 22 91.5t59 68.5Zm22-60q-20-20-31.5-45.5T340-560q0-58 41-99t99-41q58 0 99 41t41 99q0 29-11.5 54.5T577-460H383Z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Suggestions</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-[#171123] mb-2">Smart Suggestions</h3>
+              <p className="text-[#171123]/70">
                 Get AI-driven tips on where to start exploring first.
               </p>
             </div>
@@ -143,9 +143,7 @@ export default function App() {
               <button className="bg-white text-[#6F2DBD] hover:bg-[#FBFBFB] px-8 py-4 rounded-lg font-medium transition">
                 Get Started Now
               </button>
-              <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#6F2DBD] px-8 py-4 rounded-lg font-medium transition">
-                View Demo
-              </button>
+              
             </div>
           </div>
         </div>
@@ -181,3 +179,4 @@ export default function App() {
     </div>
   );
 }
+
