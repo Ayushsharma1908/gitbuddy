@@ -48,12 +48,7 @@ export default function SignIn() {
             >
               How it Works
             </a>
-            <a 
-              href="#pricing" 
-              className="text-[#171123] hover:text-[#6F2DBD] transition"
-            >
-              Pricing
-            </a>
+            
           </div>
 
           {/* Sign Up Button */}
