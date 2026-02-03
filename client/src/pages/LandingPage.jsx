@@ -206,7 +206,7 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => navigate("/signup")}
-                className="bg-[#6F2DBD] hover:bg-[#A663CC] text-white stroke-white px-6 py-2 rounded-lg font-medium transition"
+                className="bg-[#6F2DBD] hover:bg-[#A663CC] text-white border border-white px-6 py-2 rounded-lg font-medium transition"
               >
                 Get Started
               </button>
