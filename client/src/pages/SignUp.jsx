@@ -98,14 +98,7 @@ export default function SignUp() {
               >
                 How it Works
               </a>
-              <a 
-                href="#pricing" 
-                className={`transition ${
-                  darkMode ? 'text-gray-300 hover:text-[#A663CC]' : 'text-[#171123] hover:text-[#6F2DBD]'
-                }`}
-              >
-                Pricing
-              </a>
+              
             </div>
 
             {/* Dark Mode Toggle */}
