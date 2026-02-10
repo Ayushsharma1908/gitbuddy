@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Home() {
+export default function Homepage() {
   const [repoUrl, setRepoUrl] = useState("");
 
   return (
