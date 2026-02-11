@@ -10,7 +10,7 @@ export default function LandingPage() {
         <nav className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-[#6F2DBD] to-[#A663CC] rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-[#0D9488] to-[#2DD4BF] rounded-lg flex items-center justify-center">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
               </svg>
@@ -38,10 +38,10 @@ export default function LandingPage() {
             </a>
           </div>
 
-          {/* Get Started Button */}
+          {/* Get Started Button - Teal */}
           <button
             onClick={() => navigate("/signup")}
-            className="bg-gradient-to-r from-[#6F2DBD] to-[#A663CC] hover:from-[#A663CC] hover:to-[#6F2DBD] text-white px-6 py-2 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-purple-500/20"
+            className="bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#14B8A6] hover:to-[#5EEAD4] text-white px-6 py-2 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-teal-500/20"
           >
             Get Started
           </button>
@@ -50,10 +50,10 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section className="w-full px-6 py-12 md:px-12 md:py-20 relative overflow-hidden">
-        {/* Background gradient */}
+        {/* Background gradient - Blue/Purple tones */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0F0A1E] via-[#0F0A1E] to-[#1A1445]"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#6F2DBD]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#4B2A6B]/10 rounded-full blur-3xl"></div>
         
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-8">
@@ -70,7 +70,7 @@ export default function LandingPage() {
               AI-driven improvements in seconds. Stop guessing, start building.
             </p>
 
-            {/* Repo link */}
+            {/* Repo link - Purple */}
             <div className="mb-12">
               <a
                 href="https://github.com/username/repository"
@@ -85,7 +85,7 @@ export default function LandingPage() {
               </a>
             </div>
 
-            {/* Input Field */}
+            {/* Input Field - Purple accent */}
             <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto mb-8">
               <div className="flex-1 relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#6F2DBD] to-[#A663CC] rounded-lg blur opacity-30"></div>
@@ -110,7 +110,8 @@ export default function LandingPage() {
                   />
                 </div>
               </div>
-              <button className="bg-gradient-to-r from-[#6F2DBD] to-[#A663CC] hover:from-[#A663CC] hover:to-[#6F2DBD] text-white px-8 py-4 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-purple-500/30 whitespace-nowrap transform hover:-translate-y-0.5">
+              {/* Analyze Button - Teal */}
+              <button className="bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#14B8A6] hover:to-[#5EEAD4] text-white px-8 py-4 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-teal-500/30 whitespace-nowrap transform hover:-translate-y-0.5">
                 Analyze
               </button>
             </div>
@@ -128,7 +129,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section - Purple/Blue theme */}
       <section className="w-full px-6 py-12 md:px-12 md:py-20 bg-[#1A1445]/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -141,7 +142,7 @@ export default function LandingPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Step 1 */}
+            {/* Step 1 - Purple theme */}
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-[#6F2DBD] to-[#A663CC] rounded-2xl blur opacity-20 group-hover:opacity-30 transition"></div>
               <div className="relative bg-[#0F0A1E] rounded-2xl p-8 border border-[#2A2250]">
@@ -155,7 +156,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Step 2 */}
+            {/* Step 2 - Purple theme */}
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-[#6F2DBD] to-[#A663CC] rounded-2xl blur opacity-20 group-hover:opacity-30 transition"></div>
               <div className="relative bg-[#0F0A1E] rounded-2xl p-8 border border-[#2A2250]">
@@ -169,7 +170,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Step 3 */}
+            {/* Step 3 - Purple theme */}
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-[#6F2DBD] to-[#A663CC] rounded-2xl blur opacity-20 group-hover:opacity-30 transition"></div>
               <div className="relative bg-[#0F0A1E] rounded-2xl p-8 border border-[#2A2250]">
@@ -199,9 +200,10 @@ export default function LandingPage() {
                 Join developers using RepoLens to understand complex repositories in seconds
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                {/* Get Started Button - Teal */}
                 <button
                   onClick={() => navigate("/signup")}
-                  className="bg-white text-[#0F0A1E] hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105"
+                  className="bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] hover:from-[#14B8A6] hover:to-[#5EEAD4] text-white px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-teal-500/20"
                 >
                   Get Started Free
                 </button>
@@ -222,7 +224,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-[#6F2DBD] to-[#A663CC] rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-[#0D9488] to-[#2DD4BF] rounded-lg flex items-center justify-center">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                 </svg>
