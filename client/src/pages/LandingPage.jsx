@@ -55,9 +55,8 @@ export default function LandingPage() {
           {/* Get Started Button - Teal with black text and rocket */}
           <button
             onClick={() => navigate("/signup")}
-            className="bg-[#14B8A6] hover:bg-[#0D9488] text-black px-5 py-2.5 rounded-lg font-medium transition-all flex items-center gap-2 shadow-lg shadow-teal-500/30"
+            className="bg-[#3B82F6] hover:bg-[#60A5FA] text-black px-5 py-2.5 rounded-lg font-medium transition-all flex items-center gap-2 shadow-lg shadow-blue-500/30"
           >
-            <span>🚀</span>
             <span>Get Started</span>
           </button>
         </nav>
@@ -159,11 +158,6 @@ export default function LandingPage() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <span className="text-[#60A5FA] font-semibold text-sm uppercase tracking-wider">Powerful Features</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
-              Everything you need to
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#C084FC]">understand any codebase</span>
-            </h2>
             <p className="text-lg text-[#94A3B8] max-w-2xl mx-auto">
               Our AI-powered platform gives you complete visibility into any GitHub repository
             </p>
@@ -410,14 +404,14 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => navigate("/signup")}
-                  className="bg-[#14B8A6] hover:bg-[#0D9488] text-black px-8 py-3.5 rounded-xl font-semibold transition-all inline-flex items-center gap-2 shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50"
+                  className="bg-[#3B82F6] hover:bg-[#60A5FA] text-black px-8 py-3.5 rounded-xl font-semibold transition-all inline-flex items-center gap-2 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50"
                 >
                   <span>🚀</span>
                   <span>Analyze Your First Repo</span>
                 </button>
                 <button
                   onClick={() => navigate("/demo")}
-                  className="bg-transparent hover:bg-white/10 text-white border border-[#2DD4BF]/30 hover:border-[#2DD4BF] px-8 py-3.5 rounded-xl font-semibold transition-all"
+                  className="bg-transparent hover:bg-white/10 text-white border border-[#3B82F6]/30 hover:border-[#3B82F6] px-8 py-3.5 rounded-xl font-semibold transition-all"
                 >
                   View Demo Analysis
                 </button>
