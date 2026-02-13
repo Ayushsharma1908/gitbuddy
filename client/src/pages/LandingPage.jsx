@@ -53,7 +53,7 @@ export default function LandingPage() {
 
           {/* Get Started Button - Teal with black text and rocket */}
           <button
-            onClick={() => navigate("/signup")}
+            onClick={() => navigate("/signin")}
             className="bg-[#3B82F6] hover:bg-[#60A5FA] text-black px-5 py-2.5 rounded-lg font-medium transition-all flex items-center gap-2 shadow-lg shadow-blue-500/30"
           >
             <span>Get Started</span>

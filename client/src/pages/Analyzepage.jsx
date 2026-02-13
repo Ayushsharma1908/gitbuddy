@@ -10,7 +10,7 @@ export default function AnalyzePage() {
     e.preventDefault();
     console.log("Analyzing:", repoUrl);
     // Add your analysis logic here
-    navigate("/analysis-results", { state: { repoUrl } });
+    navigate("/homepage", { state: { repoUrl } });
   };
 
   return (
