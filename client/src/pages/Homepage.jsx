@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   Folder,
   File,
@@ -24,6 +24,12 @@ import RepoLensLogo from "../assets/Repolenslogo.svg";
 
 export default function HomePage() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const analysis = location.state?.analysis;
+
+  const repoName = analysis?.name || "nova-dashboard-v2";
+  const techStack = analysis?.techStack || [];
+
   const [repoUrl, setRepoUrl] = useState("");
   const [expandedFolders, setExpandedFolders] = useState({
     src: true,
@@ -45,7 +51,7 @@ export default function HomePage() {
   const handleAnalyze = (e) => {
     e.preventDefault();
     console.log("Analyzing:", repoUrl);
-    navigate("/analysis", { state: { repoUrl } });
+    navigate("/analyzepage", { state: { repoUrl } });
   };
 
   const handleAISuggestions = () => {
@@ -73,6 +79,13 @@ export default function HomePage() {
       )}
     </div>
   );
+
+  useEffect(() => {
+  if (!analysis) {
+    navigate("/");
+  }
+}, [analysis, navigate]);
+
 
   // Custom Folder Node Component
   const FolderNode = ({
@@ -150,9 +163,7 @@ export default function HomePage() {
           {/* Project Name Badge */}
           <div className="hidden md:flex items-center gap-2 bg-[#1E293B]/80 backdrop-blur-sm px-4 py-2 rounded-full border border-[#60A5FA]/30">
             <span className="w-2 h-2 bg-[#60A5FA] rounded-full animate-pulse"></span>
-            <span className="text-sm font-medium text-white">
-              nova-dashboard-v2
-            </span>
+            <span className="text-sm font-medium text-white">{repoName}</span>
             <span className="text-xs text-[#94A3B8] ml-2">
               • Analysis Complete • 2 mins ago
             </span>
@@ -254,7 +265,7 @@ export default function HomePage() {
                         </div>
                         <div>
                           <span className="text-base font-semibold text-white">
-                            nova-dashboard-v2
+                            {repoName}
                           </span>
                           <span className="text-xs text-[#94A3B8] ml-3">
                             Root directory • 48 files
@@ -574,54 +585,22 @@ export default function HomePage() {
                     </h3>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
-                    <div className="bg-[#1E293B]/30 rounded-lg p-2 hover:bg-[#1E293B]/50 transition-colors">
-                      <span className="text-[10px] text-[#94A3B8] block mb-0.5">
-                        Frontend
-                      </span>
-                      <span className="px-1.5 py-0.5 bg-blue-500/20 text-blue-300 rounded text-[10px] font-medium inline-block">
-                        React 18
-                      </span>
-                    </div>
-                    <div className="bg-[#1E293B]/30 rounded-lg p-2 hover:bg-[#1E293B]/50 transition-colors">
-                      <span className="text-[10px] text-[#94A3B8] block mb-0.5">
-                        Database
-                      </span>
-                      <span className="px-1.5 py-0.5 bg-green-500/20 text-green-300 rounded text-[10px] font-medium inline-block">
-                        PostgreSQL
-                      </span>
-                    </div>
-                    <div className="bg-[#1E293B]/30 rounded-lg p-2 hover:bg-[#1E293B]/50 transition-colors">
-                      <span className="text-[10px] text-[#94A3B8] block mb-0.5">
-                        ORM
-                      </span>
-                      <span className="px-1.5 py-0.5 bg-purple-500/20 text-purple-300 rounded text-[10px] font-medium inline-block">
-                        Prisma
-                      </span>
-                    </div>
-                    <div className="bg-[#1E293B]/30 rounded-lg p-2 hover:bg-[#1E293B]/50 transition-colors">
-                      <span className="text-[10px] text-[#94A3B8] block mb-0.5">
-                        Styling
-                      </span>
-                      <span className="px-1.5 py-0.5 bg-cyan-500/20 text-cyan-300 rounded text-[10px] font-medium inline-block">
-                        Tailwind
-                      </span>
-                    </div>
-                    <div className="bg-[#1E293B]/30 rounded-lg p-2 hover:bg-[#1E293B]/50 transition-colors">
-                      <span className="text-[10px] text-[#94A3B8] block mb-0.5">
-                        Infra
-                      </span>
-                      <span className="px-1.5 py-0.5 bg-yellow-500/20 text-yellow-300 rounded text-[10px] font-medium inline-block">
-                        Docker
-                      </span>
-                    </div>
-                    <div className="bg-[#1E293B]/30 rounded-lg p-2 hover:bg-[#1E293B]/50 transition-colors">
-                      <span className="text-[10px] text-[#94A3B8] block mb-0.5">
-                        Package
-                      </span>
-                      <span className="px-1.5 py-0.5 bg-orange-500/20 text-orange-300 rounded text-[10px] font-medium inline-block">
-                        npm
-                      </span>
-                    </div>
+                    {techStack.length > 0 ? (
+                      techStack.slice(0, 6).map((tech, index) => (
+                        <div
+                          key={index}
+                          className="bg-[#1E293B]/30 rounded-lg p-2 hover:bg-[#1E293B]/50 transition-colors"
+                        >
+                          <span className="px-1.5 py-0.5 bg-blue-500/20 text-blue-300 rounded text-[10px] font-medium inline-block">
+                            {tech}
+                          </span>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="text-xs text-[#94A3B8] col-span-3">
+                        No tech stack detected
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -859,10 +838,10 @@ export default function HomePage() {
             <div className="flex items-center gap-3">
               <div className="w-6 h-6 bg-[#3B82F6] rounded-lg flex items-center justify-center">
                 <img
-                src={RepoLensLogo}
-                alt="RepoLens Logo"
-                className="w-9 h-9 object-contain"
-              />
+                  src={RepoLensLogo}
+                  alt="RepoLens Logo"
+                  className="w-9 h-9 object-contain"
+                />
               </div>
               <span className="text-xs font-semibold text-white">RepoLens</span>
               <span className="text-xs text-[#64748B]">•</span>

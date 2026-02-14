@@ -6,12 +6,31 @@ export default function AnalyzePage() {
   const navigate = useNavigate();
   const [repoUrl, setRepoUrl] = useState("");
 
-  const handleAnalyze = (e) => {
-    e.preventDefault();
-    console.log("Analyzing:", repoUrl);
-    // Add your analysis logic here
-    navigate("/homepage", { state: { repoUrl } });
-  };
+  const handleAnalyze = async (e) => {
+  e.preventDefault();
+
+  console.log("Analyzing:", repoUrl);
+
+  try {
+    const response = await fetch("http://localhost:5000/analyzepage", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ repoUrl }),
+    });
+
+    const data = await response.json(); // ✅ DEFINE data here
+
+    console.log("Backend response:", data);
+
+    navigate("/homepage", { state: { analysis: data } });
+
+  } catch (error) {
+    console.error("Error analyzing repo:", error);
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-[#0B0E17] font-['Plus_Jakarta_Sans',_'Inter',_sans-serif] text-white relative overflow-hidden">
